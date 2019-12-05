@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.0)
+project("Feature_Extraction")
+set(CMAKE_CXX_COMPILER "/usr/bin/g++-7")
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRECTORIES})
+add_executable(test ${CMAKE_SOURCE_DIR}/test.cc)
+target_link_libraries(test ${OpenCV_LIBRARIES})
